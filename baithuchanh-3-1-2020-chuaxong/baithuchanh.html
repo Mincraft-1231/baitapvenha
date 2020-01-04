@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài thực hành</title>
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+<body>
+	<form action="#" name="formdangky">
+		<table border="0" cellpadding="5" cellspacing="5">
+			<tr>
+				<h1 align="center">ĐĂNG KÝ HỌC TRỰC TUYẾN</h1>
+				<td align="right">
+					Họ tên:
+				</td>
+				<td>
+					<input type="text" maxlength="20" placeholder=" họ và tên" id="hoten" name="hoten">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Tên đăng nhập:
+				</td>
+				<td>
+					<input type="text" title="tên đăng nhập không được có ký tự đặc biệt" placeholder=" tên đăng nhập" id="tendangnhap">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Điện thoại:
+				</td>
+				<td>
+					<input type="text" placeholder=" nhập số điện thoại"id="dienthoai">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Email:
+				</td>
+				<td>
+					<input type="text" name="email" placeholder=" Nhập Email" id="Email">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Giới tính
+				</td>
+				<td>
+					<input type="radio" name="gioitinh" id="Nam">Nam
+					<input type="radio" name="gioitinh" id="Nữ">Nữ
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Khóa học đăng ký:
+				</td>
+				<td>
+					<select name="khoahoc">
+						<option>Lập trình PHP</option>
+						<option>Thiết kế đồ họa</option>
+						<option>Lập trình Android</option>
+						<option>Kỹ thuật làm phim</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Khóa học đã tham gia:
+				</td>
+				<td>
+					<input type="checkbox">Lập trình PHP
+					<input type="checkbox">Thiết kế đồ họa
+					<input type="checkbox">Lập trình Android
+					<input type="checkbox">Kỹ thuật làm phim
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Ghi chú
+				</td>
+				<td>
+					<textarea  cols="90" rows="10" id="gichu"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					Mã xác nhận:
+				</td>
+				<td>
+					<input type="text" placeholder="nhập mã xác nhận" id="nhapma">	
+					<img src="https://www.phpcaptcha.org/securimage/securimage_show.php?v=123" width="160px;" height="80px;">
+					<a href="#" id="chon-anh">Chọn ảnh</a>
+				</td>		
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="button" name="check" value="Check" onclick="check();"> 
+				</td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+		// $(function)(){
+		// 	$('chon-anh').click(function(){
+		// 		var link = 'img/https://www.phpcaptcha.org/securimage/securimage_show.php?v=123';
+		// 		$('#').attr('src',link + math.random());
+
+		// 		var link2 = $('10').attr('src');
+		// 		var thaythe = link.replace() 
+		// 		// dùng biểu thức quy tắc thay thế số 12 trong link thành số random
+		// 		// sau đó gán lại cho ảnh src
+
+		// 	});
+		// };
+
+			function check() { 
+		   		 var email = document.getElementById('Email'); 
+		   		 var hoten = document.getElementById('hoten');
+		   		 var kiemtra_email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+		  		  if (!kiemtra_email.test(email.value)) { 
+		             alert('Hay nhap dia chi email hop le.\nExample@gmail.com');
+		             email.focus; 
+		             return false; 
+		    }
+		    else{ 
+		             alert('Email hop le.'); 
+		    } 
+
+		    	var kiemtra_hoten = /^[[a-z0-9_A-ZàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐD]/$;
+		    	if (!kiemtra_hoten.test(hoten.value)){
+		    		alert('hay nhap ho ten hop le.\n/nExample nguyen van a');
+		    		hoten.focus;
+		    		return false;
+		    	}
+		    	else{
+
+		    		 alert('ho ten hop le.');
+		    	}
+
+
+
+
+		} 
+
+
+
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

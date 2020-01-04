@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vidu3</title>
+</head>
+<body>
+	<script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		var str = 'Đương kim vô địch thế giới SKT tiếc nuối với kết quả 3-0 trước đối thủ';
+		console.log('chuỗi nội dung:' + str);
+
+		console.log('Thay thế theo bê lớn: B');// ngước lại với b, thay thế chữ i ở từ chứa i và không kết thúc bằng i
+		var mau_tim_kiem3 =/i\B/ig;
+		var ket_qua3 = str.replace(mau_tim_kiem3,'@');
+		console.log(ket_qua3);
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vidu2</title>
+</head>
+<body>
+	<script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		var str = 'Đương kim vô địch thế giới SKT tiếc nuối với kết quả 3-0 trước đối thủ';
+		console.log('chuỗi nội dung:' + str);
+
+		console.log('Theo b: thay thế chữ t ở từ có chứa chữ t và chữ t đó phải là ký tự đầu tiên của từ');
+		var mau_tim_kiem2 =/\bg/ig;
+		var ket_qua2 = str.replace(mau_tim_kiem2,'@');
+		console.log(ket_qua2);
+	</script>
+</body>
+</html>
